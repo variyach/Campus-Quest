@@ -1,4 +1,5 @@
 const http=require('http'),fs=require('fs'),path=require('path'),crypto=require('crypto');
+// Railway deployment sync: current main build
 const PORT=process.env.PORT||3000,HOST='0.0.0.0',ADMIN_USER=process.env.ADMIN_USER||'admin',ADMIN_PASSWORD=process.env.ADMIN_PASSWORD||'change-this-admin-password';
 const DB=path.join(__dirname,'data','db.json');if(!fs.existsSync(path.dirname(DB)))fs.mkdirSync(path.dirname(DB),{recursive:true});if(!fs.existsSync(DB))fs.writeFileSync(DB,'{"users":[]}');const sessions=new Map();
 const db=()=>{try{return JSON.parse(fs.readFileSync(DB,'utf8'))}catch{return{users:[]}}},save=d=>fs.writeFileSync(DB,JSON.stringify(d,null,2));
