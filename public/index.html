@@ -26,5 +26,5 @@ function nextDay(){s.event=null;s.day++;s.energy+=20;s.stress-=5;if(s.day>5){s.d
 async function save(){if(!me)return;try{await api('/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({gameState:s})});toast('Game saved online.')}catch(e){toast(e.message)}}
 async function loadGame(){try{let x=await api('/api/save');if(x.gameState){s=Object.assign(s,x.gameState)}}catch(e){}}
 async function logout(){await api('/api/logout',{method:'POST'});me=null;s.started=false;auth()}
-(async()=>{try{let x=await api('/api/me');if(x.user){me=x.user;await load(true);if(s.started)render();else setup()}else auth()}catch(e){auth()}})();
+(async()=>{try{let x=await api('/api/me');if(x.user){me=x.user;await loadGame();if(s.started)render();else setup()}else auth()}catch(e){auth()}})();
 </script></body></html>
