@@ -1,16 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Campus Quest: The University Life</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#f5f2ec;color:#25232b}.wrap{max-width:1100px;margin:auto;padding:24px}.card{background:#fff;border:1px solid #e5e0d7;border-radius:22px;padding:24px;margin:16px 0;box-shadow:0 8px 30px #0000000a}h1{font-size:clamp(40px,7vw,72px);line-height:.92;margin:8px 0}h2{margin:6px 0 12px}h3{margin:4px 0 8px}.muted{color:#777}.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:800;color:#6d5dfc}.btn{border:0;border-radius:11px;padding:12px 16px;font-weight:750;cursor:pointer}.primary{background:#6d5dfc;color:#fff}.soft{background:#eeeaff;color:#5146c7}.ghost{background:#fff;border:1px solid #ddd}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.two{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}.optiongrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.option{padding:16px;border:1px solid #ddd7ce;border-radius:15px;background:#fff;text-align:left;cursor:pointer}.option:hover,.option.selected{border:2px solid #6d5dfc;background:#f3f0ff}.stat{padding:15px;border:1px solid #eee8df;border-radius:15px;background:#faf9f6}.stat b{display:block;font-size:24px;margin-top:4px}.bar{height:7px;background:#e9e5de;border-radius:8px;margin-top:8px}.fill{height:100%;background:#6d5dfc;border-radius:8px}.actions{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.action{padding:15px;border:1px solid #ddd7ce;border-radius:14px;background:#fff;text-align:left;cursor:pointer}.action:hover{border-color:#6d5dfc}.field{display:grid;gap:6px;margin:12px 0}.field input,.field select{padding:12px;border:1px solid #d8d2c9;border-radius:10px;font:inherit}.pill{display:inline-block;padding:5px 9px;border-radius:99px;background:#eeeaff;color:#5146c7;font-size:12px;font-weight:700}.event{background:#f0edff;border-radius:15px;padding:17px}.choice{display:block;width:100%;margin-top:8px;padding:11px;border:1px solid #d8d1ff;background:#fff;border-radius:10px;text-align:left;cursor:pointer}.toast{position:fixed;right:18px;bottom:18px;background:#242229;color:#fff;padding:12px 16px;border-radius:11px}.hero{min-height:75vh;display:flex;align-items:center}.small{font-size:13px}@media(max-width:700px){.grid,.optiongrid,.actions,.two{grid-template-columns:1fr}.wrap{padding:14px}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,system-ui,sans-serif;background:#f5f2ec;color:#25232b}.wrap{max-width:1100px;margin:auto;padding:24px}.hero{min-height:78vh;display:flex;align-items:center}.card{background:#fff;border:1px solid #e3ded5;border-radius:18px;padding:22px;margin:14px 0;box-shadow:0 5px 20px #0001}h1{font-size:clamp(38px,7vw,70px);line-height:.95;margin:8px 0}h2{margin:6px 0 12px}.muted{color:#777}.eyebrow{font-size:12px;letter-spacing:.12em;font-weight:800;color:#6256d9}.btn{border:0;border-radius:10px;padding:12px 16px;font-weight:700;cursor:pointer;margin:4px}.primary{background:#6256d9;color:#fff}.soft{background:#eae7ff;color:#4d43b5}.ghost{background:#fff;border:1px solid #d8d2c9}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.two{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.option,.action{border:1px solid #ddd7ce;background:#fff;border-radius:13px;padding:15px;text-align:left;cursor:pointer}.option:hover,.action:hover{border-color:#6256d9}.field{margin:12px 0}.field label{display:block;margin-bottom:5px;font-weight:700}.field input,.field select{width:100%;padding:11px;border:1px solid #d5d0c8;border-radius:9px;font:inherit}.stat{padding:14px;border:1px solid #eee8df;border-radius:13px;background:#faf9f6}.stat b{display:block;font-size:23px;margin-top:3px}.bar{height:6px;background:#e5e1da;border-radius:8px;margin-top:7px}.fill{height:100%;background:#6256d9;border-radius:8px}.actions{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.pill{display:inline-block;padding:4px 8px;border-radius:20px;background:#eae7ff;color:#4d43b5;font-size:12px;font-weight:700}.event{background:#efecff}.log p{margin:7px 0}.error{background:#fff0f0;border:1px solid #e0a0a0;color:#8a2222;padding:14px;border-radius:12px;margin-top:15px}@media(max-width:700px){.grid,.options,.actions,.two{grid-template-columns:1fr}.wrap{padding:14px}}
 </style>
 </head>
-<body><main class="wrap" id="app"></main><div id="toast"></div>
+<body>
+<main class="wrap" id="app">
+<section class="hero">
+<div>
+<div class="eyebrow">UNIVERSITY LIFE SIMULATION</div>
+<h1>Campus Quest</h1>
+<h2>The University Life</h2>
+<p class="muted">Build your own university story through classes, choices, money, friendships, activities and graduation.</p>
+<button class="btn primary" id="startBtn">Start New Game →</button>
+<button class="btn soft" id="continueBtn">Continue</button>
+<div class="card"><b>Student Mode · Phase 1</b><p class="muted">Character creation, fictional university selection, real-world degree programs, curriculum, daily actions, events, stats and saves.</p></div>
+</div>
+</section>
+</main>
 <script>
-const app=document.getElementById('app');
-const programs=[
+(function(){
+'use strict';
+var app=document.getElementById('app');
+var programs=[
 {name:'BSBA Financial Management',college:'College of Business',years:4,skills:['Finance','Accounting','Economics','Analysis'],courses:['Fundamentals of Accounting','Business Finance','Money and Banking','Financial Markets','Investment Analysis','Risk Management']},
 {name:'BS Accountancy',college:'College of Business',years:4,skills:['Accounting','Auditing','Taxation','Analysis'],courses:['Financial Accounting','Management Accounting','Income Taxation','Auditing','Accounting Information Systems','Business Law']},
 {name:'BSBA Marketing Management',college:'College of Business',years:4,skills:['Marketing','Communication','Research','Creativity'],courses:['Principles of Marketing','Consumer Behavior','Market Research','Digital Marketing','Sales Management','Strategic Marketing']},
@@ -23,48 +39,94 @@ const programs=[
 {name:'BS Biology',college:'College of Arts and Sciences',years:4,skills:['Biology','Research','Laboratory','Science'],courses:['General Biology','Cell Biology','Genetics','Ecology','Biochemistry','Laboratory Research']},
 {name:'BS Hospitality Management',college:'College of Hospitality and Tourism',years:4,skills:['Hospitality','Management','Service','Communication'],courses:['Hospitality Operations','Food and Beverage Service','Housekeeping Management','Tourism Fundamentals','Events Management','Hospitality Marketing']}
 ];
-const universities=[
+var universities=[
 {name:'Eastern Valley State University',type:'Public',desc:'Affordable public university with a large, active campus.',tuition:'Lower',feature:'Student organizations'},
 {name:'Metro Central University',type:'Private',desc:'Urban private university with industry-focused opportunities.',tuition:'Higher',feature:'Career connections'},
 {name:'St. Aurelia University',type:'Private',desc:'Private university with smaller classes and a strong campus community.',tuition:'Higher',feature:'Student support'}
 ];
-const genEd=['Understanding the Self','Purposive Communication','Mathematics in the Modern World','Readings in Philippine History','The Contemporary World','Science, Technology and Society','Ethics','Art Appreciation','Physical Education'];
-let state={started:false,name:'',age:18,pronouns:'She/Her',background:'Middle-income',personality:'Calm',university:null,program:null,year:1,semester:1,week:1,day:1,money:1500,energy:82,morale:72,stress:24,reputation:40,gpa:0,skills:{},courses:{},friends:{},log:[],event:null};
-const events=[
-['A Classmate Needs Help','A classmate from your program asks to study together.',[['Study together',5,7,-8],['Wish them luck',0,2,-2],['Say you are busy',-3,0,1]]],
-['Surprise Quiz','Your professor announces a short quiz today.',[['Review before class',0,5,-8],['Take it without reviewing',0,1,-3],['Skip class',-4,0,2]]],
-['Organization Fair','Student organizations are recruiting new members.',[['Join a program organization',4,0,-6],['Join a hobby club',2,3,-7],['Rest instead',0,5,2]]],
-['Group Project','Your group needs someone to coordinate the project.',[['Volunteer',5,3,-8],['Help quietly',2,2,-5],['Decline',-2,0,0]]],
-['Career Talk','A company is holding a career talk on campus.',[['Attend',3,2,-5],['Study instead',0,4,-6],['Skip',0,0,4]]],
-['Family Message','Your family checks in during a busy week.',[['Call them',2,3,-3],['Reply later',0,0,0],['Ignore for now',-2,0,1]]]
+var genEd=['Understanding the Self','Purposive Communication','Mathematics in the Modern World','Readings in Philippine History','The Contemporary World','Science, Technology and Society','Ethics','Art Appreciation','Physical Education'];
+var events=[
+['A Classmate Needs Help','A classmate asks to study together.',[['Study together',5,7,-8],['Wish them luck',0,2,-2],['Say you are busy',-3,0,1]]],
+['Surprise Quiz','Your professor announces a short quiz.',[['Review before class',0,5,-8],['Take it without reviewing',0,1,-3],['Skip class',-4,0,2]]],
+['Organization Fair','Student organizations are recruiting.',[['Join a program organization',4,0,-6],['Join a hobby club',2,3,-7],['Rest instead',0,5,2]]],
+['Group Project','Your group needs a coordinator.',[['Volunteer',5,3,-8],['Help quietly',2,2,-5],['Decline',-2,0,0]]]
 ];
-function saveLocal(){localStorage.setItem('campusQuestState',JSON.stringify(state));toast('Game saved');}
-function loadLocal(){try{const x=JSON.parse(localStorage.getItem('campusQuestState'));if(x){state=x;return true}}catch(e){}return false}
-function toast(x){document.getElementById('toast').textContent=x;setTimeout(()=>document.getElementById('toast').textContent='',1600)}
-function stat(label,value,max=100){let v=Math.max(0,Math.min(max,Number(value)));return '<div class="stat"><span class="muted">'+label+'</span><b>'+Math.round(v)+'</b><div class="bar"><div class="fill" style="width:'+v/max*100+'%"></div></div></div>'}
-function home(){app.innerHTML='<section class="hero"><div><div class="eyebrow">UNIVERSITY LIFE SIMULATION</div><h1>Campus Quest</h1><h2>The University Life</h2><p class="muted">Choose your university. Choose your degree. Build your own university story.</p><button class="btn primary" onclick="create()">Start New Game →</button> <button class="btn soft" onclick="continueGame()">Continue</button><div class="card"><b>Phase 1</b><p class="muted">Student Mode prototype: character creation, university and program selection, curriculum, daily life, stats, events and local saves.</p></div></div></section>'}
-function create(){state={...state,started:false,university:null,program:null,year:1,semester:1,week:1,day:1,money:1500,energy:82,morale:72,stress:24,reputation:40,gpa:0,skills:{},courses:{},friends:{},log:[],event:null};stepCharacter()}
-function stepCharacter(){app.innerHTML='<div class="card"><div class="eyebrow">STEP 1 OF 3</div><h1>Create Your Student</h1><div class="field"><label>Name</label><input id="nm" placeholder="Your character name"></div><div class="field"><label>Age</label><input id="age" type="number" value="18" min="16" max="40"></div><div class="field"><label>Pronouns</label><select id="pro"><option>She/Her</option><option>He/Him</option><option>They/Them</option><option>Other</option></select></div><div class="field"><label>Background</label><select id="bg"><option>Low-income</option><option>Lower-middle income</option><option selected>Middle-income</option><option>Upper-middle income</option><option>Wealthy</option><option>Working student</option><option>Scholarship student</option></select></div><div class="field"><label>Personality</label><select id="per"><option>Calm</option><option>Ambitious</option><option>Introverted</option><option>Extroverted</option><option>Competitive</option><option>Friendly</option><option>Independent</option><option>Disciplined</option><option>Creative</option></select></div><button class="btn primary" onclick="characterNext()">Next: University →</button></div>'}
-function characterNext(){state.name=document.getElementById('nm').value.trim()||'Alex';state.age=Number(document.getElementById('age').value)||18;state.pronouns=document.getElementById('pro').value;state.background=document.getElementById('bg').value;state.personality=document.getElementById('per').value;stepUniversity()}
-function stepUniversity(){app.innerHTML='<div class="card"><div class="eyebrow">STEP 2 OF 3</div><h1>Choose Your University</h1><p class="muted">Fictional universities with different environments. Their curricula are configurable and do not represent any real institution.</p><div class="optiongrid">'+universities.map((u,i)=>'<button class="option" onclick="pickUni('+i+')"><span class="pill">'+u.type+'</span><h3>'+u.name+'</h3><p>'+u.desc+'</p><small>Tuition: '+u.tuition+' · '+u.feature+'</small></button>').join('')+'</div><p><button class="btn ghost" onclick="stepCharacter()">← Back</button></p></div>'}
-function pickUni(i){state.university=universities[i];stepProgram()}
-function stepProgram(){app.innerHTML='<div class="card"><div class="eyebrow">STEP 3 OF 3</div><h1>Choose Your Program</h1><p class="muted">Real-world degree programs are represented as game curricula. Course names and sequencing can vary by university.</p><div class="optiongrid">'+programs.map((p,i)=>'<button class="option" onclick="pickProgram('+i+')"><span class="pill">'+p.college+'</span><h3>'+p.name+'</h3><p>'+p.years+' years · '+p.skills.slice(0,3).join(' · ')+'</p><small>'+p.courses.slice(0,3).join(' · ')+'</small></button>').join('')+'</div><p><button class="btn ghost" onclick="stepUniversity()">← Back</button></p></div>'}
-function pickProgram(i){state.program=programs[i];state.started=true;state.courses={};state.program.courses.forEach(c=>state.courses[c]=65);state.skills={};state.program.skills.forEach(k=>state.skills[k]=45);state.log=['Orientation day: welcome to '+state.university.name+'.','You enrolled in '+state.program.name+'.'];curriculum()}
-function curriculum(){let p=state.program;app.innerHTML='<div class="card"><div class="eyebrow">YOUR ACADEMIC PATH</div><h1>'+p.name+'</h1><p><b>'+state.university.name+'</b> · '+p.college+' · '+p.years+' years</p><div class="two"><div><h3>Representative General Education</h3><p>'+genEd.join(' · ')+'</p><h3>Program Courses</h3><ul>'+p.courses.map(c=>'<li>'+c+'</li>').join('')+'</ul></div><div class="card"><h3>Your Starting Profile</h3><p>Energy 82 · Morale 72 · Stress 24</p><p>Money ₱1,500</p><p>Starting year: 1st Year</p></div></div><button class="btn primary" onclick="begin()">Begin University →</button></div>'}
-function begin(){state.log.unshift('First day: you entered campus for the first time.');saveLocal();render()}
-function render(){if(!state.started){home();return}let avg=Object.values(state.courses).reduce((a,b)=>a+b,0)/Math.max(1,Object.values(state.courses).length);state.gpa=(avg/25);let day=['Monday','Tuesday','Wednesday','Thursday','Friday'][((state.day-1)%5)];app.innerHTML='<div class="top"><div><div class="eyebrow">CAMPUS QUEST · STUDENT MODE</div><h2>'+state.name+'</h2><span class="pill">'+state.program.name+'</span></div><div><button class="btn soft" onclick="saveLocal()">Save</button> <button class="btn ghost" onclick="home()">Menu</button></div></div><div class="grid">'+stat('⚡ Energy',state.energy)+stat('😊 Morale',state.morale)+stat('🔥 Stress',state.stress)+stat('⭐ Reputation',state.reputation)+stat('📚 Academic Average',avg)+stat('💰 Money',state.money,3000)+'</div><div class="two"><div><div class="card"><div class="top"><div><h2>'+day+' · Week '+state.week+'</h2><p class="muted">Year '+state.year+' · Semester '+state.semester+'</p></div><button class="btn primary" onclick="nextDay()">End Day</button></div><h3>Today\'s Classes</h3><p><b>'+state.program.courses[(state.day-1)%state.program.courses.length]+'</b> · 8:00 AM</p><div class="actions"><button class="action" onclick="act(&quot;class&quot;)"><b>📖 Attend Class</b><br><span class="muted">Learn and build academic progress.</span></button><button class="action" onclick="act(&quot;study&quot;)"><b>📝 Study</b><br><span class="muted">Improve your current course.</span></button><button class="action" onclick="act(&quot;social&quot;)"><b>👥 Socialize</b><br><span class="muted">Build relationships and morale.</span></button><button class="action" onclick="act(&quot;work&quot;)"><b>💼 Part-time Work</b><br><span class="muted">Earn ₱150 but spend energy.</span></button><button class="action" onclick="act(&quot;club&quot;)"><b>🎭 Join Campus Activity</b><br><span class="muted">Build reputation and connections.</span></button><button class="action" onclick="act(&quot;rest&quot;)"><b>🛏️ Rest</b><br><span class="muted">Recover energy and reduce stress.</span></button></div></div>'+eventBox()+'</div><aside><div class="card"><h3>Program Skills</h3>'+Object.entries(state.skills).map(([k,v])=>'<p><b>'+k+'</b> '+Math.round(v)+'</p>').join('')+'</div><div class="card"><h3>University</h3><p><b>'+state.university.name+'</b></p><p class="muted">'+state.university.desc+'</p><h3>Campus Life</h3><p>Library · Cafeteria · Student Center · Gym · Organization Fair</p></div></aside></div><div class="card"><h3>Recent Life</h3>'+state.log.slice(0,10).map(x=>'<p>• '+x+'</p>').join('')+'</div>'}
-function eventBox(){if(!state.event)return '<div class="card"><h3>📅 No active event</h3><p class="muted">Continue your day. A new event may appear tomorrow.</p></div>';let e=state.event;return '<div class="card event"><b>EVENT</b><h3>'+e[0]+'</h3><p>'+e[1]+'</p>'+e[2].map((c,i)=>'<button class="choice" onclick="eventChoice(&quot;'+i+'&quot;)">'+c[0]+'</button>').join('')+'</div>'}
-function act(type){if(type==='class'){state.energy-=8;state.stress+=4;let c=state.program.courses[(state.day-1)%state.program.courses.length];state.courses[c]=Math.min(100,state.courses[c]+3);state.reputation+=1;state.log.unshift('Attended '+c+'.');}
-if(type==='study'){state.energy-=10;state.stress+=6;let c=state.program.courses[(state.day-1)%state.program.courses.length];state.courses[c]=Math.min(100,state.courses[c]+5);state.log.unshift('Studied '+c+' in the library.');}
-if(type==='social'){state.energy-=5;state.morale+=7;state.stress-=3;state.reputation+=1;state.friends.Classmate=(state.friends.Classmate||0)+5;state.log.unshift('Spent time with classmates.');}
+var state={
+started:false,name:'',age:18,pronouns:'She/Her',background:'Middle-income',personality:'Calm',
+university:null,program:null,year:1,semester:1,week:1,day:1,money:1500,energy:82,morale:72,stress:24,reputation:40,
+courses:{},skills:{},log:[],event:null
+};
+function save(){try{localStorage.setItem('campusQuestState',JSON.stringify(state));}catch(e){}}
+function load(){try{var x=JSON.parse(localStorage.getItem('campusQuestState'));if(x){state=x;return true;}}catch(e){}return false;}
+function clamp(v){return Math.max(0,Math.min(100,Number(v)||0));}
+function stat(name,v,max){var n=Math.max(0,Math.min(max||100,Number(v)||0));return '<div class="stat"><span class="muted">'+name+'</span><b>'+Math.round(n)+'</b><div class="bar"><div class="fill" style="width:'+((n/(max||100))*100)+'%"></div></div></div>';}
+function button(text,fn,cls){var b=document.createElement('button');b.className='btn '+(cls||'ghost');b.textContent=text;b.addEventListener('click',fn);return b;}
+function home(){
+app.innerHTML='<section class="hero"><div><div class="eyebrow">UNIVERSITY LIFE SIMULATION</div><h1>Campus Quest</h1><h2>The University Life</h2><p class="muted">Build your own university story through classes, choices, money, friendships, activities and graduation.</p><div id="homeButtons"></div><div class="card"><b>Student Mode · Phase 1</b><p class="muted">Character creation, university selection, real-world degree programs, curriculum, daily actions, events, stats and local saves.</p></div></div></section>';
+var box=document.getElementById('homeButtons');box.appendChild(button('Start New Game →',create,'primary'));box.appendChild(button('Continue',continueGame,'soft'));
+}
+function create(){
+state={started:false,name:'',age:18,pronouns:'She/Her',background:'Middle-income',personality:'Calm',university:null,program:null,year:1,semester:1,week:1,day:1,money:1500,energy:82,morale:72,stress:24,reputation:40,courses:{},skills:{},log:[],event:null};
+character();
+}
+function character(){
+app.innerHTML='<div class="card"><div class="eyebrow">STEP 1 OF 3</div><h1>Create Your Student</h1><div class="field"><label>Name</label><input id="name" placeholder="Your character name"></div><div class="field"><label>Age</label><input id="age" type="number" min="16" max="40" value="18"></div><div class="field"><label>Pronouns</label><select id="pronouns"><option>She/Her</option><option>He/Him</option><option>They/Them</option><option>Other</option></select></div><div class="field"><label>Background</label><select id="background"><option>Low-income</option><option>Lower-middle income</option><option selected>Middle-income</option><option>Upper-middle income</option><option>Wealthy</option><option>Working student</option><option>Scholarship student</option></select></div><div class="field"><label>Personality</label><select id="personality"><option>Calm</option><option>Ambitious</option><option>Introverted</option><option>Extroverted</option><option>Competitive</option><option>Friendly</option><option>Independent</option><option>Disciplined</option><option>Creative</option></select></div><div id="charBtns"></div></div>';
+var box=document.getElementById('charBtns');box.appendChild(button('Next: University →',characterNext,'primary'));box.appendChild(button('Back',home,'ghost'));
+}
+function characterNext(){
+state.name=document.getElementById('name').value.trim()||'Alex';state.age=Number(document.getElementById('age').value)||18;state.pronouns=document.getElementById('pronouns').value;state.background=document.getElementById('background').value;state.personality=document.getElementById('personality').value;university();
+}
+function university(){
+var html='<div class="card"><div class="eyebrow">STEP 2 OF 3</div><h1>Choose Your University</h1><p class="muted">These universities are fictional. They are game settings and do not represent real institutions.</p><div class="options">';
+universities.forEach(function(u,i){html+='<button class="option" data-u="'+i+'"><span class="pill">'+u.type+'</span><h3>'+u.name+'</h3><p>'+u.desc+'</p><small>Tuition: '+u.tuition+' · '+u.feature+'</small></button>';});
+html+='</div><div id="uniBack"></div></div>';app.innerHTML=html;
+universities.forEach(function(u,i){document.querySelector('[data-u="'+i+'"]').addEventListener('click',function(){state.university=u;program();});});document.getElementById('uniBack').appendChild(button('← Back',character,'ghost'));
+}
+function program(){
+var html='<div class="card"><div class="eyebrow">STEP 3 OF 3</div><h1>Choose Your Program</h1><p class="muted">Real-world degree programs are represented as configurable game curricula. Actual course titles and sequencing vary by university.</p><div class="options">';
+programs.forEach(function(p,i){html+='<button class="option" data-p="'+i+'"><span class="pill">'+p.college+'</span><h3>'+p.name+'</h3><p>'+p.years+' years · '+p.skills.slice(0,3).join(' · ')+'</p><small>'+p.courses.slice(0,3).join(' · ')+'</small></button>';});
+html+='</div><div id="progBack"></div></div>';app.innerHTML=html;
+programs.forEach(function(p,i){document.querySelector('[data-p="'+i+'"]').addEventListener('click',function(){state.program=p;startAcademic();});});document.getElementById('progBack').appendChild(button('← Back',university,'ghost'));
+}
+function startAcademic(){
+state.started=true;state.courses={};state.skills={};state.program.courses.forEach(function(c){state.courses[c]=65;});state.program.skills.forEach(function(s){state.skills[s]=45;});state.log=['Orientation day: welcome to '+state.university.name+'.','You enrolled in '+state.program.name+'.'];curriculum();
+}
+function curriculum(){
+var p=state.program;app.innerHTML='<div class="card"><div class="eyebrow">YOUR ACADEMIC PATH</div><h1>'+p.name+'</h1><p><b>'+state.university.name+'</b> · '+p.college+' · '+p.years+' years</p><div class="two"><div><h3>Representative General Education</h3><p>'+genEd.join(' · ')+'</p><h3>Program Courses</h3><ul>'+p.courses.map(function(c){return '<li>'+c+'</li>';}).join('')+'</ul></div><div class="card"><h3>Starting Profile</h3><p>Energy 82 · Morale 72 · Stress 24</p><p>Money ₱1,500</p><p>Starting year: 1st Year</p></div></div><div id="beginBox"></div></div>';document.getElementById('beginBox').appendChild(button('Begin University →',function(){save();render();},'primary'));
+}
+function render(){
+var p=state.program;var course=p.courses[(state.day-1)%p.courses.length];var vals=Object.keys(state.courses).map(function(k){return state.courses[k];});var avg=vals.reduce(function(a,b){return a+b;},0)/Math.max(1,vals.length);var weekday=['Monday','Tuesday','Wednesday','Thursday','Friday'][(state.day-1)%5];
+app.innerHTML='<div class="card"><div><div class="eyebrow">CAMPUS QUEST · STUDENT MODE</div><h2>'+state.name+'</h2><span class="pill">'+p.name+'</span></div><div id="topBtns"></div></div><div class="grid">'+stat('Energy',state.energy)+stat('Morale',state.morale)+stat('Stress',state.stress)+stat('Reputation',state.reputation)+stat('Academic Average',avg)+stat('Money',state.money,3000)+'</div><div class="two"><div><div class="card"><h2>'+weekday+' · Week '+state.week+'</h2><p class="muted">Year '+state.year+' · Semester '+state.semester+'</p><h3>Today\'s Class</h3><p><b>'+course+'</b> · 8:00 AM</p><div class="actions" id="actions"></div></div><div id="eventBox"></div></div><aside><div class="card"><h3>Program Skills</h3>'+Object.keys(state.skills).map(function(k){return '<p><b>'+k+'</b> '+Math.round(state.skills[k])+'</p>';}).join('')+'</div><div class="card"><h3>University</h3><p><b>'+state.university.name+'</b></p><p class="muted">'+state.university.desc+'</p><p>Library · Cafeteria · Student Center · Gym · Organization Fair</p></div></aside></div><div class="card log"><h3>Recent Life</h3>'+state.log.slice(0,10).map(function(x){return '<p>• '+x+'</p>';}).join('')+'</div>';
+var top=document.getElementById('topBtns');top.appendChild(button('Save',function(){save();},'soft'));top.appendChild(button('Menu',home,'ghost'));top.appendChild(button('End Day',nextDay,'primary'));
+var actions=[['📖 Attend Class','Learn and build academic progress.','class'],['📝 Study','Improve the current course.','study'],['👥 Socialize','Build relationships and morale.','social'],['💼 Part-time Work','Earn ₱150 but spend energy.','work'],['🎭 Campus Activity','Build reputation and connections.','club'],['🛏️ Rest','Recover energy and reduce stress.','rest']];
+var ab=document.getElementById('actions');actions.forEach(function(a){var b=document.createElement('button');b.className='action';b.innerHTML='<b>'+a[0]+'</b><br><span class="muted">'+a[1]+'</span>';b.addEventListener('click',function(){act(a[2]);});ab.appendChild(b);});
+renderEvent();
+}
+function renderEvent(){
+var box=document.getElementById('eventBox');if(!state.event){box.innerHTML='<div class="card"><h3>No active event</h3><p class="muted">Continue your day. A new event may appear after an action or tomorrow.</p></div>';return;}
+var e=state.event;box.innerHTML='<div class="card event"><b>EVENT</b><h3>'+e[0]+'</h3><p>'+e[1]+'</p><div id="choices"></div></div>';var cb=document.getElementById('choices');e[2].forEach(function(c,i){cb.appendChild(button(c[0],function(){eventChoice(i);},'ghost'));});
+}
+function act(type){
+var c=state.program.courses[(state.day-1)%state.program.courses.length];
+if(type==='class'){state.energy-=8;state.stress+=4;state.courses[c]=clamp(state.courses[c]+3);state.reputation+=1;state.log.unshift('Attended '+c+'.');}
+if(type==='study'){state.energy-=10;state.stress+=6;state.courses[c]=clamp(state.courses[c]+5);state.log.unshift('Studied '+c+'.');}
+if(type==='social'){state.energy-=5;state.morale+=7;state.stress-=3;state.reputation+=1;state.log.unshift('Spent time with classmates.');}
 if(type==='work'){state.energy-=14;state.stress+=7;state.money+=150;state.log.unshift('Worked a part-time shift and earned ₱150.');}
 if(type==='club'){state.energy-=7;state.morale+=4;state.reputation+=4;state.log.unshift('Joined a campus activity.');}
 if(type==='rest'){state.energy+=18;state.stress-=10;state.morale+=3;state.log.unshift('Took time to rest.');}
-state.energy=Math.max(0,Math.min(100,state.energy));state.stress=Math.max(0,Math.min(100,state.stress));state.morale=Math.max(0,Math.min(100,state.morale));state.reputation=Math.max(0,Math.min(100,state.reputation));if(Math.random()<.25)state.event=events[Math.floor(Math.random()*events.length)];saveLocal();render()}
-function eventChoice(i){let c=state.event[2][i];state.reputation+=c[1];state.morale+=c[2];state.energy+=c[3];state.log.unshift(state.event[0]+': '+c[0]);state.event=null;saveLocal();render()}
-function nextDay(){state.day++;state.energy-=3;if(state.day>5){state.day=1;state.week++;state.money-=250;state.log.unshift('A new university week begins. Weekly living expenses: ₱250.');}
-state.energy=Math.max(0,Math.min(100,state.energy));state.stress=Math.max(0,state.stress-3);state.morale=Math.max(0,Math.min(100,state.morale+2));if(state.week%4===0&&state.day===1){state.log.unshift('Midterm season is approaching. Your preparation matters.');state.stress+=6}if(Math.random()<.55)state.event=events[Math.floor(Math.random()*events.length)];saveLocal();render()}
-function continueGame(){if(loadLocal()&&state.started){render();toast('Game loaded')}else{create()}}
-home();
-</script></body></html>
-<!-- live rebuild trigger: 2026-09-23 -->
+state.energy=clamp(state.energy);state.stress=clamp(state.stress);state.morale=clamp(state.morale);state.reputation=clamp(state.reputation);
+if(Math.random()<.25)state.event=events[Math.floor(Math.random()*events.length)];save();render();
+}
+function eventChoice(i){var c=state.event[2][i];state.reputation=clamp(state.reputation+c[1]);state.morale=clamp(state.morale+c[2]);state.energy=clamp(state.energy+c[3]);state.log.unshift(state.event[0]+': '+c[0]);state.event=null;save();render();}
+function nextDay(){state.day++;state.energy-=3;if(state.day>5){state.day=1;state.week++;state.money-=250;state.log.unshift('A new university week begins. Weekly living expenses: ₱250.');}state.energy=clamp(state.energy);state.stress=clamp(state.stress-3);state.morale=clamp(state.morale+2);if(state.week%4===0&&state.day===1){state.log.unshift('Midterm season is approaching.');state.stress=clamp(state.stress+6);}if(Math.random()<.55)state.event=events[Math.floor(Math.random()*events.length)];save();render();}
+function continueGame(){if(load()&&state.started){render();}else{create();}}
+function showError(e){document.body.innerHTML='<main class="wrap"><div class="card"><div class="eyebrow">CAMPUS QUEST</div><h1>Game error</h1><p>The game loaded but its script hit an error.</p><div class="error">'+String(e&&e.message||e)+'</div><p>Please refresh once. If it happens again, send me this screen.</p></div></main>';}
+try{
+document.getElementById('startBtn').addEventListener('click',create);
+document.getElementById('continueBtn').addEventListener('click',continueGame);
+}catch(e){showError(e);}
+})();
+</script>
+</body>
+</html>
+<!-- robust rebuild: 2026-09-23 -->
